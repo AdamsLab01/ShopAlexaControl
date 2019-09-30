@@ -14,8 +14,8 @@ fauxmoESP fauxmo;
 #define CompEmptyRly 12
 
 #define ID_LightRly "Shop Lights"
-#define ID_CompFillRly "Compressor"
-#define ID_CompEmptyRly "Compressor Empty"
+#define ID_CompFillRly "Fill Compressor"
+#define ID_CompEmptyRly "Empty Compressor"
 
 void setup() {
 
@@ -57,11 +57,11 @@ void setup() {
       digitalWrite(LightRly, state ? HIGH : LOW);
     }
 
-    if (strcmp(device_name, "Compressor") == 0) {
+    if (strcmp(device_name, "Fill Compressor") == 0) {
       digitalWrite(CompFillRly, state ? HIGH : LOW);
     }
 
-    if (strcmp(device_name, "Compressor Empty") == 0) {
+    if (strcmp(device_name, "Empty Compressor") == 0) {
       digitalWrite(CompEmptyRly, state ? HIGH : LOW);
     }
   });
